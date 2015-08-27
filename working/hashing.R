@@ -6,24 +6,19 @@ s2 <- unique(c("a","a","b","b","e"))
 s3 <- unique(c("c","c","d","d","e"))
 s4 <- unique(c("d","d","e","e","b"))
 
-setUnion <- union(s1,s2)
-setUnion <- union(setUnion, s3)
-setUnion <- union(setUnion, s4)
-
-setMatrix <- matrix(nrow=length(setUnion),ncol=4)
-
-matrixRes <- cbind(setUnion, setMatrix)
-setList <- list(s1,s2,s3,s4)
 
 # matrix representation of sets
-setsToMatrix <- function(matrixRes, setList){
-  for (vec in setList) {
-    for (item in vec) {
-      matrixRes[,1 == item] <- 1 # not working
-    }
+setsToMatrix <- function(setList){
+  main_set <- unique(unlist(setList))
+  out <- matrix(data = main_set)
+  for (item in setList){
+    column <- as.numeric(main_set %in% item)
+    out <- cbind(out,column)
   }
-  return(matrixRes)
+  return(out)
 }
+
+setsToMatrix(list(s1,s2,s3,s4))
 
 minHash <- function(){
   # 
