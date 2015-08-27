@@ -19,12 +19,10 @@ setList <- list(s1,s2,s3,s4)
 setsToMatrix <- function(matrixRes, setList){
   for (vec in setList) {
     for (item in vec) {
-      
-      matrixRes[,1] 
+      matrixRes[,1 == item] <- 1 # not working
     }
-
-
   }
+  return(matrixRes)
 }
 
 minHash <- function(){
