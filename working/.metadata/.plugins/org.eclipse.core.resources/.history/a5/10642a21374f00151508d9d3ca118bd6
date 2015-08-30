@@ -1,0 +1,13 @@
+package mining_datasets;
+import java.util.*;
+public class main_class {
+	public static void main(String[] args){
+		//String[] tryThis = {1,2,3};
+		for(int x = 10; x < 20; x = x+1) {
+	         System.out.print("value of x : " + x );
+	         System.out.print("\n");
+	      }
+	   
+		System.out.print("hi");
+	}
+}

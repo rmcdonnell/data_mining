@@ -1,4 +1,5 @@
-working/.metadata/
-working/.recommenders/
+**/.
+!**/.R
+!**/.java
 *~
 *.pdf
