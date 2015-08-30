@@ -1,5 +1,10 @@
-**/.
-!**/.R
-!**/.java
+/working/.recommenders/
+/working/.metadata/
+/working/mining_datasets/.classpath
+/working/mining_datasets/.project
+/working/mining_datasets/.settings
+*/.
+!*/.R
+!*/.java
 *~
 *.pdf
